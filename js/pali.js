@@ -41,13 +41,23 @@ let palindroma;
 // } else {
 //     console.log('non è palindroma')
 // }
+
+
 let parolaInvertitaFinita = parolaInvertita.join('');
 let parolaDaControllareFinita = parolaDaControllare.join('');
 
+let risultato = isPalindroma( parolaDaControllareFinita , parolaInvertitaFinita);
 
-if ( parolaDaControllareFinita === parolaInvertitaFinita) {
-    console.log('è palindroma')
-} else {
-    console.log('non è palindroma')
+
+// Funzioni
+
+function isPalindroma ( parola , contrarioParola) {
+
+    if ( parola === contrarioParola) {
+        console.log('è palindroma')
+    } else {
+        console.log('non è palindroma')
+    
+    }
 
 }
