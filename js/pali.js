@@ -21,23 +21,33 @@ console.log(parolaDaControllare, parolaInvertita)
 
 let palindroma;
 
-for (let i = 0; i < parolaUtente.length; i++) {
+// for (let i = 0; i < parolaUtente.length; i++) {
 
-    palindroma = false;
+//     palindroma = false;
 
-    if ( parolaDaControllare[i] === parolaInvertita[i] ) {
-        palindroma = true;
-        console.log('è palindroma')
-    } else {
-        console.log('non è palindroma')
-        palindroma = true;
-    }
+//     if ( parolaDaControllare[i] === parolaInvertita[i] ) {
+//         palindroma = true;
+//         console.log('è palindroma')
+//     } else {
+//         console.log('non è palindroma')
+//         palindroma = false;
+//     }
 
-}
+// }
 
 
-if ( palindroma) {
+// if ( palindroma) {
+//     console.log('è palindroma')
+// } else {
+//     console.log('non è palindroma')
+// }
+let parolaInvertitaFinita = parolaInvertita.join('');
+let parolaDaControllareFinita = parolaDaControllare.join('');
+
+
+if ( parolaDaControllareFinita === parolaInvertitaFinita) {
     console.log('è palindroma')
 } else {
     console.log('non è palindroma')
+
 }
