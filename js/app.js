@@ -18,7 +18,7 @@ console.log(sceltaUtente, numeroUtente);
 
 // Generiamo un numero random da 1 a 5 per il computer
 
-const numeroPc =  Math.floor((Math.random() * 5) + 1);
+const numeroPc =  randomNumber(1, 5);
 
 console.log(numeroPc);
 
@@ -30,10 +30,53 @@ console.log(somma);
 
 // Vediamo se la somma dei due numeri è pari o dispari
 
-const resto = somma % 2;
-
-if ( resto === 0 ) {
-    console.log('La somma dei due numeri è pari')
-} else {
-    console.log('La somma dei due numeri è dispari')
+if ( isEven ( somma ) ) {
+    console.log('La somma dei due numeri è pari');
+} else if ( !isEven ( somma ) ){
+    console.log('La somma dei due numeri è dispari');
 }
+
+// Comunichiamo all'utente chi ha vinto
+
+const risultatoPrint = document.getElementById ('risultato');
+
+if ( (sceltaUtente === 'pari' && isEven ( somma ) ) || ( sceltaUtente === 'dispari' && !isEven ( somma )))  {
+
+    risultatoPrint.innerHTML = 'Utente ha vinto';
+
+} else {
+    risultatoPrint.innerHTML = 'Il computer ha vinto';
+}
+
+
+
+
+
+
+// FUNZIONI
+
+// Funzione Random
+
+function randomNumber (numeroMin , numeroMax) {
+
+    let numeroRandom = Math.floor((Math.random() * numeroMax) + numeroMin);
+    
+    return numeroRandom;
+
+}
+
+// Funzione pari o dispari
+
+function isEven ( numero ) {
+
+    const resto = numero % 2;
+
+    if ( resto === 0 ) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+
