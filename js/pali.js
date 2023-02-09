@@ -46,18 +46,30 @@ let palindroma;
 let parolaInvertitaFinita = parolaInvertita.join('');
 let parolaDaControllareFinita = parolaDaControllare.join('');
 
+const risultatoPrint = document.getElementById ('risultato');
+
 let risultato = isPalindroma( parolaDaControllareFinita , parolaInvertitaFinita);
+
+
+
 
 
 // Funzioni
 
 function isPalindroma ( parola , contrarioParola) {
 
+    let test;
+
     if ( parola === contrarioParola) {
-        console.log('è palindroma')
+        console.log('è palindroma');
+        test = risultatoPrint.innerHTML = 'Palindroma';
+        
     } else {
-        console.log('non è palindroma')
-    
+        console.log('non è palindroma');
+        test = risultatoPrint.innerHTML = 'Non è Palindroma';
+        
     }
+
+    return test;
 
 }
