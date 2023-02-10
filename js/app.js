@@ -71,11 +71,13 @@ function isEven ( numero ) {
 
     const resto = numero % 2;
 
-    if ( resto === 0 ) {
-        return true;
-    } else {
-        return false;
-    }
+    // if ( resto === 0 ) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+    return resto === 0;
 
 }
 

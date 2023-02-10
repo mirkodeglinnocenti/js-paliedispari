@@ -8,7 +8,9 @@
 
 // Chiedere all'utente di inserire una parola e metterla dentro un array
 
-const parolaUtente = prompt('Insersci una parola');
+let parolaUtente = prompt('Insersci una parola');
+
+parolaUtente = parolaUtente.toLowerCase();
 
 let parolaDaControllare = parolaUtente.split('');
 console.log(parolaDaControllare)
@@ -20,6 +22,14 @@ parolaDaControllare = parolaUtente.split('');
 console.log(parolaDaControllare, parolaInvertita)
 
 let palindroma;
+
+
+let parolaInvertitaFinita = parolaInvertita.join('');
+let parolaDaControllareFinita = parolaDaControllare.join('');
+
+const risultatoPrint = document.getElementById ('risultato');
+
+let risultato = isPalindroma( parolaDaControllareFinita , parolaInvertitaFinita);
 
 // for (let i = 0; i < parolaUtente.length; i++) {
 
@@ -43,12 +53,6 @@ let palindroma;
 // }
 
 
-let parolaInvertitaFinita = parolaInvertita.join('');
-let parolaDaControllareFinita = parolaDaControllare.join('');
-
-const risultatoPrint = document.getElementById ('risultato');
-
-let risultato = isPalindroma( parolaDaControllareFinita , parolaInvertitaFinita);
 
 
 
